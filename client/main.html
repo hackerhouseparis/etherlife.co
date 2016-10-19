@@ -1,29 +1,57 @@
 <head>
-  <title>Etherlife.co</title>
+  <title>etherlife.co | legacy contract</title>
 </head>
 
 <body>
-  <h1>Etherlife.co !</h1>
-  {{> menu}}
-  {{> home}}
-  {{> availableRights}}
+  <div class="full">
+    <div class="container" >
+      {{> home}}
+    </div>
+    <div class="jumbotron full" >
+      <div class="container" style="background-color: rgba(255, 255, 255, 0.5); padding: 30px; border-radius: 15px 50px; margin-bottom: 4%;">
+        <div class="col-lg-4" >
+          <div style="text-align: center;margin-bottom: 3%;"><i class="fa fa-cubes" style="font-size: 8em;" aria-hidden="true"></i></div>
+          <h2>On blockchain</h2>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+        </div>
+        <div class="col-lg-4" >
+          <div style="text-align: center; margin-bottom: 3%;"><i class="fa fa-key" style="font-size: 8em;" aria-hidden="true"></i></div>
+          <h2>Lock for life</h2>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+        </div>
+        <div class="col-lg-4" >
+          <div style="text-align: center; margin-bottom: 3%;"><i class="fa fa-globe" style="font-size: 8em;" aria-hidden="true"></i></div>
+          <h2>Free &amp; open</h2>
+          <p >Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        </div>
+      </div>
+      <p style="text-align:center">
+        <a class="btn btn-primary btn-lg" href="#" role="button">
+          <i class="fa fa-rocket" aria-hidden="true"></i>
+          Create your legacy contract
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+          {{> availableRights}}
+      </div>
+    </div>
+  </div>
 </body>
 
-<template name="menu">
-  <ul>
-    <li>Exercer vos ayants droits</li>
-    <li>Créer un contrat</li>
-  </ul>
-</template>
-
 <template name="home">
-  <h2>Qu'est-ce que etherlife.co ?</h2>
+  <h1 class="display-3">EtherLife.co</h1>
+  <p>description of etherlife.co</p>
 </template>
 
 <template name="availableRights">
-  <h2>Vos droits disponibles</h2>
+  <h2>Your rights</h2>
   <form action="#">
-    <label for="male">Entrez votre id</label> <input type="text" name="">
+    <label for="male">Enter your public key</label> <input type="text" name="">
     <input type="submit" value="Submit">
   </form>
 </template>

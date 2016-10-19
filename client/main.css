@@ -1,1 +1,8 @@
-/* CSS declarations go here */
+.full {
+    background: url('https://www.policygenius.com/blog/library/uploads/2016/06/feat-compare-life-insurance.jpeg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    min-height:960px;
+}
