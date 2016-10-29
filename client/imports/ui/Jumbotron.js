@@ -1,6 +1,8 @@
 
 import React from 'react'
 
+import Button from './Button'
+
 const styles = {
   textAlign: 'center',
   marginBottom: '3%',
@@ -37,11 +39,6 @@ export default () => (
         <p >Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
       </div>
     </div>
-    <p style={{ textAlign: 'center' }}>
-      <a className="btn btn-primary btn-lg" href="#" role="button">
-        <i className="fa fa-rocket" aria-hidden="true"></i>
-        Create your legacy contract
-      </a>
-    </p>
+    <Button content='Create your legacy contract' />
   </div>
 )
