@@ -4,6 +4,9 @@ import React, { Component } from 'react'
 import '../styles/Connect.css'
 
 import Button from './Button'
+import { connect } from 'react-redux'
+
+import { setPublicKey } from '../reducers/app'
 
 class Connect extends Component {
 
@@ -21,7 +24,8 @@ class Connect extends Component {
   }
 
   submit () {
-    this.props.onSubmit(this.state.publicKey)
+    const { dispatch } = this.props
+    dispatch(setPublicKey(this.state.publicKey))
     this.setState({ publicKey: '' })
   }
 
@@ -50,4 +54,4 @@ class Connect extends Component {
   }
 }
 
-export default Connect
+export default connect()(Connect)

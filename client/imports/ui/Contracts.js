@@ -35,14 +35,4 @@ class Contracts extends Component {
   }
 }
 
-Contracts.defaultProps = {
-  list: [
-    { publicKey: 'ewlfheroigheriogero' },
-    { publicKey: 'regregrtrwhrtwhrthr' },
-    { publicKey: 'rtwhrtbtrbhrthbrtbr' },
-    { publicKey: 'awefergrehtrhrhrtrt' },
-    { publicKey: 'brbrtbrtwbrwtbrwrtw' },
-  ]
-}
-
 export default Contracts

@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import Footer from './Footer'
 import Jumbotron from './Jumbotron'
@@ -16,38 +17,28 @@ const Header = () => (
   </div>
 )
 
-class Content extends Component {
-
-  constructor (props) {
-    super(props)
-
-    this.submit = this.submit.bind(this)
-
-    this.state = {
-      publicKey: null,
-    }
-  }
-
-  submit (publicKey) {
-    alert('Connect has submitted')
-    this.setState({ publicKey })
-  }
+const Content = connect(
+  state => ({
+    publicKey: state.app.publicKey,
+    contracts: state.app.contractsList,
+  })
+)(class extends Component {
 
   render () {
 
-    const { publicKey } = this.state
+    const { publicKey, contracts } = this.props
 
     return (
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            {!publicKey ? <Connect onSubmit={this.submit} /> : <Contracts onClick={index => alert(index)} />}
+            {!publicKey ? <Connect /> : <Contracts list={contracts} onClick={index => console.log(index)} />}
           </div>
         </div>
       </div>
     )
   }
-}
+})
 
 export default () => (
   <div>
