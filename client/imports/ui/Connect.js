@@ -21,7 +21,7 @@ class Connect extends Component {
   }
 
   submit () {
-    alert(this.state.publicKey)
+    this.props.onSubmit(this.state.publicKey)
     this.setState({ publicKey: '' })
   }
 
