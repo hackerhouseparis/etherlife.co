@@ -1,0 +1,13 @@
+
+.Connect {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Connect-Form {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
