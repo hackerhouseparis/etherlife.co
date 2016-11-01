@@ -89,11 +89,11 @@ contract continuity{
         if (!inactive()) // Verify that the owner is inactive
             throw;
         if (beneficiaries[msg.sender]==0) // Verify that the claimer is a beneficiary
-            throw; 
-        if (beneficiaries[msg.sender]>lowestRank) // Someone with a lower rank already made a claim
             throw;
         if (lowestRank==0) // We are the first one claiming
             timeFirstClaim=now;
+        else if (beneficiaries[msg.sender]>=lowestRank) // Someone with a lower rank already made a claim
+            throw;
         lowestRank=beneficiaries[msg.sender];
         lowestClaimer=msg.sender;
         Claim(lowestClaimer,lowestRank);
@@ -129,3 +129,4 @@ contract continuity{
     function () payable {} // Accept funds transferts
 
 }
+
