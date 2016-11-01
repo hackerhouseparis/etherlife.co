@@ -17,6 +17,9 @@ class Connect extends Component {
     this.state = {
       publicKey: '',
     }
+    this.styleButton = {
+     fontSize: '15px',
+   }
   }
 
   handleChange ({ target: { value } }) {
@@ -37,7 +40,7 @@ class Connect extends Component {
       <div className='Connect'>
         <h1>Sign In </h1>
         <div className='Connect-Form'>
-          <Button content='Metamask' icon='sign-in' />
+          <Button content='Metamask' icon='sign-in' styleButton={this.styleButton} />
           <input
             onChange={this.handleChange}
             value={publicKey}
@@ -47,6 +50,7 @@ class Connect extends Component {
           <Button
             action={this.submit}
             content='Submit'
+            styleButton={this.styleButton}
             icon='send' />
         </div>
       </div>
