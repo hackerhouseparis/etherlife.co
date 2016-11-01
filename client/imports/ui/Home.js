@@ -15,7 +15,7 @@ const styleSubTitle = {
 export default () => (
   <div>
     <Center><img src="/images/etherlife_co.png" style={styleLogo} /></Center>
-    <p className="lead text-xs-center" style={styleSubTitle}><strong>BUILD YOUR LEGACY</strong></p>
+    <p className="lead text-xs-center" style={styleSubTitle}><strong>Secure your legacy</strong></p>
     <Center><Button content='Create your legacy contract' /></Center>
   </div>
 )
