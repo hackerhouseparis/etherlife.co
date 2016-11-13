@@ -20,6 +20,8 @@ class Connect extends Component {
     this.styleButton = {
      fontSize: '15px',
    }
+   this.web3jspublicKey = web3.eth.defaultAccount;
+   this.amount = '';
   }
 
   handleChange ({ target: { value } }) {
@@ -46,6 +48,7 @@ class Connect extends Component {
             value={publicKey}
             placeholder='Enter your public key'
           />
+          <p>Your public key : {this.web3jspublicKey}<br />Amount : {this.amount}</p>
           <br />
           <Button
             action={this.submit}
