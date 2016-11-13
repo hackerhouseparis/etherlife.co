@@ -7,13 +7,26 @@ import Jumbotron from './Jumbotron'
 import Home from './Home'
 import Connect from './Connect'
 import Contracts from './Contracts'
+import Menu from './Menu'
 
 const Header = () => (
-  <div className="full">
-    <div className="container" >
-      <Home />
+  <div>
+    <div className="container">
+      <header>
+        <Menu />
+      </header>
     </div>
-    <Jumbotron />
+    <div className="section hero">
+      <h1>Build your legacy of your ethers</h1>
+      <div className="sign-up-form">
+        <form className="w-clearfix" data-name="Signup Form" data-redirect="/success" name="wf-form-signup-form">
+          <input className="field w-input" data-name="changeTimeBeforeInactivity" id="changeTimeBeforeInactivity" maxlength="256" name="changeTimeBeforeInactivity" placeholder="Time before transfer (seconds)" required="required" type="text" />
+          <input className="button w-button" data-wait="Please wait..." type="submit" value="Create your legacy contract" />
+        </form>
+      </div>
+      <Home />
+      <Jumbotron />
+    </div>
   </div>
 )
 
