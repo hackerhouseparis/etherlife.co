@@ -8,6 +8,7 @@ import Home from './Home'
 import Connect from './Connect'
 import Contracts from './Contracts'
 import Menu from './Menu'
+import InputLegacy from './InputLegacy'
 
 const Header = () => (
   <div>
@@ -16,19 +17,7 @@ const Header = () => (
         <Menu />
       </header>
     </div>
-    <div className="section hero">
-      <div className="container">
-        <h1>Build your legacy of your ethers</h1>
-        <div className="sign-up-form">
-          <form className="w-clearfix" data-name="Signup Form" data-redirect="/success" name="wf-form-signup-form">
-            <input className="field w-input" data-name="changeTimeBeforeInactivity" id="changeTimeBeforeInactivity" maxlength="256" name="changeTimeBeforeInactivity" placeholder="Time before transfer (seconds)" required="required" type="text" />
-            <input className="button w-button" data-wait="Please wait..." type="submit" value="Create your legacy contract" />
-          </form>
-        </div>
-      </div>
-      <Home />
-      <Jumbotron />
-    </div>
+
   </div>
 )
 
@@ -58,6 +47,7 @@ const Content = connect(
 export default () => (
   <div>
     <Header />
+    <InputLegacy />
     <Content />
     <Footer />
   </div>

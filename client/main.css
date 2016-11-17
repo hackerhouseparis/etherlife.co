@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .full {
   background: url('https://www.policygenius.com/blog/library/uploads/2016/06/feat-compare-life-insurance.jpeg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -28,62 +34,49 @@ h1 {
   text-shadow: none;
 }
 
-.sign-up-form {
-  margin: 40px 0 0 15px;
+.form_legacy {
+  margin: 40px 0 140px 0;
+
 }
 
-.field {
-  width: 63%;
-  height: 54px;
-  padding-right: 20px;
-  padding-left: 20px;
-  float: left;
-  border: 0px solid #000;
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-  background-color: #fff;
-  box-shadow: inset 0 0 8px 0 transparent;
-  -webkit-transition: box-shadow 150ms ease;
-  transition: box-shadow 150ms ease;
-  color: #806732;
+.legacy {
+  border: 0;
+  background: #fff;
+  line-height: 40px;
+  padding: 5px 25px 5px 23px;
+  width: 50%;
   font-size: 18px;
   font-weight: 300;
+  color: #806732;
+  border-radius: 2px 0 0 2px;
+  border-top: solid 2px #fff;
+  border-bottom: solid 2px #fff;
+  border-left: solid 2px #fff;
 }
 
-.w-input, .w-select {
-    display: block;
-    width: 100%;
-    height: 38px;
-    padding: 8px 12px;
-    margin-bottom: 10px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333333;
-    vertical-align: middle;
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
+.legacy:hover {
+  border-top: solid 2px #a8863d;
+  border-bottom: solid 2px #a8863d;
+  border-left: solid 2px #a8863d;
 }
 
-input, textarea, keygen, select, button {
-    text-rendering: auto;
-    color: initial;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    margin: 0em 0em 0em 0em;
-    font: 13.3333px Arial;
+.legacy:active, .legacy:focus {
+  outline: none;
 }
 
-input, textarea, keygen, select, button, meter, progress {
-    -webkit-writing-mode: horizontal-tb;
+
+.submit_legacy {
+  border: 0;
+  background: #a8863d;
+  line-height: 40px;
+  padding: 7px 25px 7px 25px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  border-radius: 0 2px 2px 0;
+  transition: all .6s ease-in;
 }
 
-optgroup, select, textarea {
-    color: inherit;
-    font: inherit;
-    margin: 0;
+.submit_legacy:hover {
+  background: #18c7aa;
 }
