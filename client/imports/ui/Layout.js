@@ -9,6 +9,7 @@ import Connect from './Connect'
 import Contracts from './Contracts'
 import Menu from './Menu'
 import InputLegacy from './InputLegacy'
+import NeverLost from './NeverLost'
 
 const Header = () => (
   <div>
@@ -48,6 +49,7 @@ export default () => (
   <div>
     <Header />
     <InputLegacy />
+    <NeverLost />
     <Content />
     <Footer />
   </div>
