@@ -10,6 +10,7 @@ import Contracts from './Contracts'
 import Menu from './Menu'
 import InputLegacy from './InputLegacy'
 import NeverLost from './NeverLost'
+import SaveEther from './SaveEther'
 
 const Header = () => (
   <div>
@@ -50,6 +51,7 @@ export default () => (
     <Header />
     <InputLegacy />
     <NeverLost />
+    <SaveEther />
     <Content />
     <Footer />
   </div>

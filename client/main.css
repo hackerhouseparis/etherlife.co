@@ -30,6 +30,13 @@
   text-align: center;
 }
 
+.section.white {
+  padding-top: 92px;
+  padding-bottom: 92px;
+  background-color: #fff;
+  text-align: center;
+}
+
 h1 {
   margin: 10px 0px;
   color: #8a6d2f;
@@ -116,4 +123,10 @@ p {
 .infinite {
   margin-top: 52px;
   opacity: 0.15;
+}
+
+.fa-5 {
+  margin-top: 52px;
+  opacity: 0.3;
+  font-size:8em;
 }
