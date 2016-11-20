@@ -37,6 +37,13 @@
   text-align: center;
 }
 
+.section.blue {
+  padding-top: 92px;
+  padding-bottom: 92px;
+  background-color: #3c78fa;
+  text-align: center;
+}
+
 h1 {
   margin: 10px 0px;
   color: #8a6d2f;
@@ -46,6 +53,10 @@ h1 {
   font-weight: 300;
   letter-spacing: 0px;
   text-shadow: none;
+}
+
+.section.blue h2 {
+  color: #fff;
 }
 
 h2 {

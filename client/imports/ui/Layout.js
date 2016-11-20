@@ -11,6 +11,7 @@ import Menu from './Menu'
 import InputLegacy from './InputLegacy'
 import NeverLost from './NeverLost'
 import SaveEther from './SaveEther'
+import Team from './Team'
 
 const Header = () => (
   <div>
@@ -52,6 +53,7 @@ export default () => (
     <InputLegacy />
     <NeverLost />
     <SaveEther />
+    <Team />
     <Content />
     <Footer />
   </div>

@@ -15,7 +15,7 @@ class SaveEther extends Component {
           <i className="fa fa-life-ring fa-5" aria-hidden="true"></i>
         </div>
       </div>
-  )
+    )
   }
 }
 
