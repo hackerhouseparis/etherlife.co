@@ -54,7 +54,6 @@ export default () => (
     <NeverLost />
     <SaveEther />
     <Team />
-    <Content />
     <Footer />
   </div>
 )

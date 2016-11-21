@@ -11,7 +11,7 @@ class NeverLost extends Component {
           <img className="infinite" src="http://uploads.webflow.com/5828711395e67dfb60311239/5828711395e67dfb60311243_infinite-loop.svg" width="187" />
         </div>
       </div>
-  )
+    )
   }
 }
 

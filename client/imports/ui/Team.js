@@ -8,9 +8,30 @@ class Team extends Component {
         <div className="container">
           <h2>Team</h2>
           <div className="row">
-            <div className="col-md-4"><img src="/images/wagner_nicolas.jpg" width="250px" alt="Wagner Nicolas" /></div>
-            <div className="col-md-4"><img src="/images/lesaege_clement.jpg" width="250px" alt="Lesaege Clément" /></div>
-            <div className="col-md-4"><img src="/images/adoucoure_abdoulaye.jpg" width="250px" alt="Adoucourre Abdoulaye" /></div>
+            <div className="col-md-3">
+              <figure>
+                <img src="/images/wagner_nicolas.jpg" width="250px" alt="Wagner Nicolas" />
+                <figcaption>Nicolas - <em>Developer</em></figcaption>
+              </figure>
+            </div>
+            <div className="col-md-3">
+              <figure>
+                <img src="/images/lesaege_clement.jpg" width="250px" alt="Lesaege Clément" />
+                <figcaption>Clément - <em>Computer scientist</em></figcaption>
+              </figure>
+            </div>
+            <div className="col-md-3">
+              <figure>
+                <img src="/images/badi_guillaume.jpg" width="250px" alt="Badi Guillaume" />
+                <figcaption>Guillaume - <em>Developer</em></figcaption>
+              </figure>
+            </div>
+            <div className="col-md-3">
+              <figure>
+                <img src="/images/adoucoure_abdoulaye.jpg" width="250px" alt="Adoucourre Abdoulaye" />
+                <figcaption>Abdoulaye - <em>Sustainable financing</em></figcaption>
+              </figure>
+            </div>
           </div>
         </div>
       </div>
