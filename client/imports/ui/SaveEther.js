@@ -12,7 +12,7 @@ class SaveEther extends Component {
             If you lost the private key on your first account,
             the ethers are automaticaly transferred of your second account.
           </p>
-          <i className="fa fa-life-ring fa-5" aria-hidden="true"></i>
+          <i className="fa fa-life-ring fa-5" style={{fontSize: '8em'}} aria-hidden="true"></i>
         </div>
       </div>
     )
