@@ -8,7 +8,7 @@ class SaveEther extends Component {
         <div className="container">
           <h2>Save your ethers if you have lost your private key</h2>
           <p>
-            Define the first benefiacierie of your ethers as your second account.
+            Define the first benefiaciery of your ethers as your second account.
             If you lost the private key on your first account,
             the ethers are automaticaly transferred of your second account.
           </p>

@@ -18,7 +18,7 @@
 
 .section.hero {
   padding-top: 92px;
-  padding-bottom: 92px;
+  padding-bottom: 72px;
   background-color: #fac960;
   text-align: center;
 }
@@ -89,7 +89,7 @@ p {
 }
 
 .form_legacy {
-  margin: 40px 0 110px 0;
+  margin: 40px 0 30px 0;
 
 }
 

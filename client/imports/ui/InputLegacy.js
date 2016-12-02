@@ -1,12 +1,13 @@
-import React, { Component } from "react"
-import { setPublicKey } from '../reducers/app'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { setMessageFlash } from '../reducers/app'
 
 import Menu from './Menu'
 class InputLegacy extends Component {
 
   constructor (props) {
     super(props)
-    this.state = {focus: false, value: ''}
+    this.state = {focus: false, value: '', messageFlash: ''}
     this.onFocus = this.onFocus.bind(this)
     this.onBlur = this.onBlur.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -34,6 +35,7 @@ class InputLegacy extends Component {
 
   flashMessage () {
     const { dispatch } = this.props
+    this.setState({ messageFlash: 'test' })
     dispatch(setMessageFlash(this.state.messageFlash))
     this.setState({ messageFlash: '' })
   }
@@ -44,7 +46,6 @@ class InputLegacy extends Component {
       alert("install metamask");
     } else {
       let res = this.state.value.split(",");
-      console.log(res[0])
       let inactivityTime = res[0];
       let timeToClaim = res[1];
       let continuityContract = web3.eth.contract(Continuity.abi);
@@ -55,13 +56,13 @@ class InputLegacy extends Component {
            from: web3.eth.accounts[0],
            data: Continuity.bytecode,
            gas: 4700000
-         }, function (e, contract){
-          console.log(e, contract);
+         }, (event, contract, state) => {
           if (typeof contract.address !== 'undefined') {
                console.log('Contract mined! address: ' + contract.address + ' transactionHash: ' + contract.transactionHash);
                contractAdress = contract.address;
                contractTransactionHash = contract.transactionHash;
                this.flashMessage
+               console.log(this.state)
           }
        })
      }
@@ -90,6 +91,7 @@ class InputLegacy extends Component {
               } : {}} />
             <input className="submit_legacy" type="submit"  onClick={this.deploySmartContract} value="Create your legacy contract" />
           </form>
+          {'undefined' === typeof web3 ? <div>Web3 account not found</div> : <div>Log in with {web3.eth.accounts[0]}</div>}
         </div>
       </div>
   )
