@@ -62,7 +62,6 @@ class InputLegacy extends Component {
                contractAdress = contract.address;
                contractTransactionHash = contract.transactionHash;
                this.flashMessage
-               console.log(this.state)
           }
        })
      }
@@ -91,7 +90,7 @@ class InputLegacy extends Component {
               } : {}} />
             <input className="submit_legacy" type="submit"  onClick={this.deploySmartContract} value="Create your legacy contract" />
           </form>
-          {'undefined' === typeof web3 ? <div>Web3 account not found</div> : <div>Log in with {web3.eth.accounts[0]}</div>}
+          {'undefined' === typeof web3 ? <div>Web3 account not found</div> : <div>Log in {web3.eth.accounts[0]}</div>}
         </div>
       </div>
   )
