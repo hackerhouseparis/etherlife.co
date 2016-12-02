@@ -20,7 +20,6 @@ const Header = () => (
         <Menu />
       </header>
     </div>
-
   </div>
 )
 
