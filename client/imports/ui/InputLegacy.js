@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { setPublicKey } from '../reducers/app'
-import { GrowlerComponent } from 'flash-notification-react-redux';
 
 import Menu from './Menu'
 class InputLegacy extends Component {
@@ -13,7 +12,7 @@ class InputLegacy extends Component {
     this.handleChange = this.handleChange.bind(this)
     this.deploySmartContract = this.deploySmartContract.bind(this)
     this.submitContract = this.submitContract.bind(this)
-    this.submit = this.submit.bind(this)
+    this.flashMessage = this.flashMessage.bind(this)
   }
 
   handleChange (event) {
@@ -35,8 +34,8 @@ class InputLegacy extends Component {
 
   flashMessage () {
     const { dispatch } = this.props
-    dispatch(setPublicKey(this.state.publicKey))
-    this.setState({ publicKey: '' })
+    dispatch(setMessageFlash(this.state.messageFlash))
+    this.setState({ messageFlash: '' })
   }
 
   deploySmartContract (event) {
@@ -62,8 +61,7 @@ class InputLegacy extends Component {
                console.log('Contract mined! address: ' + contract.address + ' transactionHash: ' + contract.transactionHash);
                contractAdress = contract.address;
                contractTransactionHash = contract.transactionHash;
-               <GrowlerComponent shownFor="9000" />
-
+               this.flashMessage
           }
        })
      }
