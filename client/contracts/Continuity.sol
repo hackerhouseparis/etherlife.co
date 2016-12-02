@@ -4,34 +4,44 @@ and/or modify it under the terms of the Do What The Fuck You Want
 To Public License, Version 2, as published by Sam Hocevar. See
 http://www.wtfpl.net/ for more details. */
 
-/*pragma solidity ^0.4.2;*/
+pragma solidity ^0.4.4;
 
 contract Continuity{
     address public owner;
-    uint256 public lastPing;
-    uint256 public timeBeforeInactivity; // Time
-    uint256 constant maxTime=2**250;
 
-    struct Beneficiary{
-        address addr; // Beneficiary address
-        uint256 timeAfterInactivity; // Number of seconds required after the owner is inactive to allow the beneficiary take control of the contract
-    }
+    uint256 public lastTimePing;
+    uint256 public timeBeforeInactivity; // Number of seconds to be considered inactive
+    uint256 public timeToClaim; // Number of seconds starting with the first claim
+    uint256 public timeFirstClaim; // Time of the first claim
+    uint256 public lowestRank=0; // Lowest rank of the claimers
+    address public lowestClaimer; // Address of the claimer with the lowest rank
+    mapping(address => uint256) public beneficiaries;
 
-    Beneficiary[] public beneficiaries;
+    event BeneficiaryChange (
+        address beneficiary,
+        uint256 rank
+    );
+
+    event Claim (
+        address claimer,
+        uint256 rank
+    );
 
     // Verify that the function is called by the owner and update lastPing.
     modifier onlyOwner() {
         if (msg.sender!=owner)
             throw;
-        _
-        lastPing=now; // Always set lastPing when the owner interacts with the contract;
+        _;
+        lastTimePing=now; // Always set lastTimePing when the owner interacts with the contract
     }
 
     /// Contract creation.
     /// inactivityTime is the number of seconds to be considered inactive
     function Continuity(uint256 inactivityTime) {
         owner=msg.sender;
-        changeTimeBeforeInactivity(inactivityTime); // Ask a time before inactivity when creating the contract in order to avoid the mistake of setting beneficiaries before it.
+        timeBeforeInactivity=_timeBeforeInactivity;
+        timeToClaim=_timeToClaim;
+        lastTimePing=now;
     }
 
     /// Ping the contract without doing anything else.
