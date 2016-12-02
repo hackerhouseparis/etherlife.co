@@ -7,13 +7,20 @@ import Jumbotron from './Jumbotron'
 import Home from './Home'
 import Connect from './Connect'
 import Contracts from './Contracts'
+import Menu from './Menu'
+import InputLegacy from './InputLegacy'
+import Ping from './Ping'
+import NeverLost from './NeverLost'
+import SaveEther from './SaveEther'
+import Team from './Team'
 
 const Header = () => (
-  <div className="full">
-    <div className="container" >
-      <Home />
+  <div>
+    <div className="container">
+      <header>
+        <Menu />
+      </header>
     </div>
-    <Jumbotron />
   </div>
 )
 
@@ -43,7 +50,11 @@ const Content = connect(
 export default () => (
   <div>
     <Header />
-    <Content />
+    <InputLegacy />
+    <Ping />
+    <NeverLost />
+    <SaveEther />
+    <Team />
     <Footer />
   </div>
 )

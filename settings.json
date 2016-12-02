@@ -1,0 +1,7 @@
+{
+  "galaxy.meteor.com": {
+    "env": {
+      "MONGO_URL": "mongodb://admin:admin@ds023408.mlab.com:23408/etherlife"
+    }
+  }
+}

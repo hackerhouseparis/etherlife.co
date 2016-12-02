@@ -1,7 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .full {
-    background: url('https://www.policygenius.com/blog/library/uploads/2016/06/feat-compare-life-insurance.jpeg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+  background: url('https://www.policygenius.com/blog/library/uploads/2016/06/feat-compare-life-insurance.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.bg-faded {
+  background-color: #fff;
+}
+
+.section.hero {
+  padding-top: 92px;
+  padding-bottom: 72px;
+  background-color: #fac960;
+  text-align: center;
+}
+
+.section.gray {
+  padding-top: 92px;
+  padding-bottom: 92px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.section.white {
+  padding-top: 92px;
+  padding-bottom: 92px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.section.blue {
+  padding-top: 92px;
+  padding-bottom: 92px;
+  background-color: #3c78fa;
+  text-align: center;
+}
+
+.section.black {
+  background-color: #000;
+}
+
+.section.water {
+  padding-top: 1px;
+  padding-bottom: 0;
+  background-color: #18c7aa;
+  text-align: center;
+}
+
+h1 {
+  margin: 10px 0px;
+  color: #8a6d2f;
+  font-size: 44px;
+  line-height: 54px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0px;
+  text-shadow: none;
+}
+
+.section.blue h2 {
+  color: #fff;
+}
+
+h2 {
+  font-weight: 300;
+  margin: 7px 0px;
+  color: #6c6c6c;
+  font-size: 40px;
+  line-height: 54px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0px;
+  text-shadow: none;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  padding-right: 60px;
+  padding-left: 60px;
+  color: rgba(0, 0, 0, .4);
+  font-size: 23px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 0px;
+  text-shadow: none;
+}
+
+.form_legacy {
+  margin: 40px 0 30px 0;
+
+}
+
+.legacy, .ping {
+  border: 0;
+  background: #fff;
+  line-height: 40px;
+  padding: 5px 25px 5px 23px;
+  width: 50%;
+  font-size: 18px;
+  font-weight: 200;
+  color: #806732;
+  border-radius: 2px 0 0 2px;
+  border-top: solid 2px #fff;
+  border-bottom: solid 2px #fff;
+  border-left: solid 2px #fff;
+}
+
+.legacy:hover {
+  border-top: solid 2px #a8863d;
+  border-bottom: solid 2px #a8863d;
+  border-left: solid 2px #a8863d;
+}
+
+.ping:hover {
+  border-top: solid 2px #fac960;
+  border-bottom: solid 2px #fac960;
+  border-left: solid 2px #fac960;
+}
+
+.legacy:active, .legacy:focus, .ping:active, .ping:focus {
+  outline: none;
+}
+
+
+.submit_legacy {
+  border: 0;
+  background: #a8863d;
+  line-height: 40px;
+  padding: 7px 25px 7px 25px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 200;
+  border-radius: 0 2px 2px 0;
+  transition: all .6s ease-in;
+}
+
+.submit_legacy:hover {
+  background: #18c7aa;
+}
+
+.submit_ping {
+  border: 0;
+  background: #fac960;
+  line-height: 40px;
+  padding: 7px 25px 7px 25px;
+  color: #6c6c6c;
+  font-size: 18px;
+  font-weight: 200;
+  border-radius: 0 2px 2px 0;
+  transition: all .6s ease-in;
+}
+
+.submit_ping:hover {
+  background: #3c78fa;
+  color: #fff;
+}
+
+.infinite {
+  margin-top: 52px;
+  opacity: 0.15;
+}
+
+.fa-5 {
+  margin-top: 52px;
+  opacity: 0.3;
+  font-size: 8em;
+}
+
+figcaption {
+  margin-top: 10px;
+  color: white;
+}
+
+.address {
+  color: #6c6c6c;
 }

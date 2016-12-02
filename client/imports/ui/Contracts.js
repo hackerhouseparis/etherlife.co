@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 
 class Contracts extends Component {
