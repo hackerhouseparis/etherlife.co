@@ -9,6 +9,7 @@ import Connect from './Connect'
 import Contracts from './Contracts'
 import Menu from './Menu'
 import InputLegacy from './InputLegacy'
+import Ping from './Ping'
 import NeverLost from './NeverLost'
 import SaveEther from './SaveEther'
 import Team from './Team'
@@ -50,6 +51,7 @@ export default () => (
   <div>
     <Header />
     <InputLegacy />
+    <Ping />
     <NeverLost />
     <SaveEther />
     <Team />

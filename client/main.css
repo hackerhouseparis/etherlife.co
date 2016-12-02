@@ -48,6 +48,13 @@
   background-color: #000;
 }
 
+.section.water {
+  padding-top: 1px;
+  padding-bottom: 0;
+  background-color: #18c7aa;
+  text-align: center;
+}
+
 h1 {
   margin: 10px 0px;
   color: #8a6d2f;
@@ -93,7 +100,7 @@ p {
 
 }
 
-.legacy {
+.legacy, .ping {
   border: 0;
   background: #fff;
   line-height: 40px;
@@ -114,7 +121,13 @@ p {
   border-left: solid 2px #a8863d;
 }
 
-.legacy:active, .legacy:focus {
+.ping:hover {
+  border-top: solid 2px #fac960;
+  border-bottom: solid 2px #fac960;
+  border-left: solid 2px #fac960;
+}
+
+.legacy:active, .legacy:focus, .ping:active, .ping:focus {
   outline: none;
 }
 
@@ -135,6 +148,23 @@ p {
   background: #18c7aa;
 }
 
+.submit_ping {
+  border: 0;
+  background: #fac960;
+  line-height: 40px;
+  padding: 7px 25px 7px 25px;
+  color: #6c6c6c;
+  font-size: 18px;
+  font-weight: 200;
+  border-radius: 0 2px 2px 0;
+  transition: all .6s ease-in;
+}
+
+.submit_ping:hover {
+  background: #3c78fa;
+  color: #fff;
+}
+
 .infinite {
   margin-top: 52px;
   opacity: 0.15;
@@ -149,4 +179,8 @@ p {
 figcaption {
   margin-top: 10px;
   color: white;
+}
+
+.address {
+  color: #6c6c6c;
 }

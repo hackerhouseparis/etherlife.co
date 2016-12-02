@@ -7,13 +7,17 @@ class InputLegacy extends Component {
 
   constructor (props) {
     super(props)
-    this.state = {focus: false, value: '', messageFlash: ''}
+    this.state = {
+      focus: false,
+      value: '',
+      contractAdress: false,
+      contractTransactionHash: false
+    }
     this.onFocus = this.onFocus.bind(this)
     this.onBlur = this.onBlur.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.deploySmartContract = this.deploySmartContract.bind(this)
     this.submitContract = this.submitContract.bind(this)
-    this.flashMessage = this.flashMessage.bind(this)
   }
 
   handleChange (event) {
@@ -31,13 +35,6 @@ class InputLegacy extends Component {
 
   submitContract (event) {
     event.preventDefault();
-  }
-
-  flashMessage () {
-    const { dispatch } = this.props
-    this.setState({ messageFlash: 'test' })
-    dispatch(setMessageFlash(this.state.messageFlash))
-    this.setState({ messageFlash: '' })
   }
 
   deploySmartContract (event) {
@@ -59,9 +56,8 @@ class InputLegacy extends Component {
          }, (event, contract, state) => {
           if (typeof contract.address !== 'undefined') {
                console.log('Contract mined! address: ' + contract.address + ' transactionHash: ' + contract.transactionHash);
-               contractAdress = contract.address;
-               contractTransactionHash = contract.transactionHash;
-               this.flashMessage
+               this.setState({ contractAdress: contract.address })
+               this.setState({ contractTransactionHash: contract.transactionHash})
           }
        })
      }
@@ -90,7 +86,13 @@ class InputLegacy extends Component {
               } : {}} />
             <input className="submit_legacy" type="submit"  onClick={this.deploySmartContract} value="Create your legacy contract" />
           </form>
-          {'undefined' === typeof web3 ? <div>Web3 account not found</div> : <div>Log in {web3.eth.accounts[0]}</div>}
+          {this.state.contractAdress ?
+            <div className="alert alert-success" role="alert">
+              <strong>Contract mined!</strong> <br/>Address: {this.state.contractAdress} <br/>TransactionHash: {this.state.contractTransactionHash}
+            </div> :
+            <div></div>
+          }
+          {'undefined' === typeof web3 ? <div className="address">Web3 account not found</div> : <div className="address">Log in {web3.eth.accounts[0]}</div>}
         </div>
       </div>
   )
