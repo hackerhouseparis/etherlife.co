@@ -6,7 +6,7 @@ http://www.wtfpl.net/ for more details. */
 
 /*pragma solidity ^0.4.4;*/
 
-contract continuity{
+contract Continuity{
     address public owner;
     uint256 public lastTimePing;
     uint256 public timeBeforeInactivity; // Number of seconds to be considered inactive
@@ -36,7 +36,7 @@ contract continuity{
 
     /// Contract creation.
     /// inactivityTime is the number of seconds to be considered inactive.
-    function continuity(uint256 _timeBeforeInactivity, uint256 _timeToClaim) {
+    function Continuity(uint256 _timeBeforeInactivity, uint256 _timeToClaim) {
         owner=msg.sender;
         timeBeforeInactivity=_timeBeforeInactivity;
         timeToClaim=_timeToClaim;
